@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Careers Hub</title>
+    <style rel="stylesheet" src="style.css"></style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 pt-16">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <div class="text-blue-700 font-bold text-xl">
+                IT Careers Hub
+            </div>
+            <ul class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+                <li><a href="#home" class="hover:text-blue-700 transition">Home</a></li>
+                <li><a href="#about-fields" class="hover:text-blue-700 transition">IT Fields</a></li>
+                
+                <li><a href="#career-advice" class="hover:text-blue-700 transition">Career Advice</a></li>
+                <li><a href="#about-me" class="hover:text-blue-700 transition">About Me</a></li>
+                <li><a href="#contact" class="hover:text-blue-700 transition">Contact</a></li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-blue-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-lineJoin="round" stroke-width="2" 
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white shandow-md">
+            <ul class="space-y-4 text-gray-700 font-semibold">
+                <li><a href="#home" class="block hover:text-blue-700 transition">Home</a></li>
+                <li><a href="#about-fields" class="block hover:text-blue-700 transition">IT Fields</a></li>
+                
+                <li><a href="#career-advice" class="block hover:text-blue-700 transition">Career Advice</a></li>
+                <li><a href="#about-me" class="block hover:text-blue-700 transition">About Me</a></li>
+                <li><a href="#contact" class="block hover:text-blue-700 transition">Contact</a></li>
+            </ul>
+
+        </div>
+    </header>
+    
+    <section id="home" class="min-h-screen flex-items-center justify-center bg-gradient-to-r from-blue-50 to-white px-6">
+        <div class="max-w-4xl text-center mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold text-blue-800 mb-4">Explore Your Future in IT</h1>
+            <p class="text-gray-700 text-lg md:text-xl mb-6">Learn about top IT fields, their real-world applications, and how you can start a successful career in tech.</p>
+            <a href="#about-fields" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition">Discover IT Fields</a>
+        </div>
+    </section>
+
+    <section id="about-fields" class="py-16 bg-white px-6">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+                IT Fields You Should Know
+            </h2>
+            <p class="text-gray-700 text-lg">Explore the most in-demand domains in Information Technology and how they impact the modern world.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full ">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Web Development</h3>
+                <p class="text-gray-700">Build websites and web apps using technologies like HTML, CSS, JavaScript, and frameworks like React or Angular.</p>
+                <div class="hidden text-gray-700 mt-2" id="web-dev-details">
+                    Web developers are responsible for creating websites and web applications. Frontend developers use HTML, CSS, and JavaScript frameworks like React or Angular to build user interfaces, while backend developers work with server-side technologies like Node.js, PHP, or Python. Full-stack developers handle both. The field is in constant demand due to the rapid growth of digital businesses.
+                </div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('web-dev-details', this)">
+                    Read More
+                </button>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Mobile App Development Development</h3>
+                <p class="text-gray-700">Create apps for Android and iOS using Flutter, React Native, Kotlin, or Swift to reach mobile users.</p>
+                <div class="hidden text-gray-700 mt-2" id="mobile-app-details">
+                    Mobile developers design apps for Android and iOS platforms using tools like Flutter, React Native, Kotlin, and Swift. With the surge in mobile usage worldwide, skilled app developers are highly sought after in industries like e-commerce, health tech, education, and finance.
+                </div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('mobile-app-details', this)">
+                    Read More
+                </button>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Data Science</h3>
+                
+                <p class="text-gray-700">Analyze data to extract insights using Python, R, Machine Learning, and visualization tools like Tableau.</p>
+                <div class="hidden text-gray-700 mt-2" id="data-science-details">
+                    Data science involves collecting, cleaning, analyzing, and visualizing data to help organizations make informed decisions. It uses tools like Python, R, pandas, and libraries for machine learning such as scikit-learn or TensorFlow. Data scientists work in roles like analyst, ML engineer, or business intelligence developer.
+
+                </div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('data-science-details', this)">
+                    Read More
+                </button>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full ">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Artificial Intelligence</h3>
+                <p class="text-gray-700">Develop intelligent systems that can learn and make decisions using neural networks and deep learning.</p>
+                <div class="hidden text-gray-700 mt-2" id="artificial-intelligence-details">
+                    AI professionals create systems that mimic human intelligence. This includes machine learning, deep learning, computer vision, and natural language processing. AI is used in virtual assistants, recommendation engines, autonomous vehicles, and healthcare diagnostics. Python, TensorFlow, and PyTorch are key tools in this field.
+                </div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('artificial-intelligence-details', this)">
+                    Read More
+                </button>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Cybersecurity</h3>
+                <p class="text-gray-700">Deliver computing services over the internet using platforms like AWS, Azure, and Google Cloud.</p>
+                <div class="hidden text-gray-700 mt-2" id="cybersecurity-details">
+                    Cybersecurity experts protect systems and data from attacks, breaches, and other cyber threats. They use firewalls, intrusion detection systems, encryption, ethical hacking, and risk assessment strategies. With rising cyber threats, jobs like penetration tester, SOC analyst, and security engineer are in high demand.                </div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('cybersecurity-details', this)">
+                    Read More
+                </button>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">DevOps</h3>
+                <p class="text-gray-700">Bridge development and operations to automate deployments and ensure fast delivery using CI/CD pipelines.</p>
+                <div class="hidden text-gray-700 mt-2" id="devops-details">
+                    DevOps bridges the gap between software development and IT operations. It promotes automation, continuous integration/deployment (CI/CD), monitoring, and collaboration. Tools like Docker, Kubernetes, Jenkins, and Git are commonly used. DevOps practices speed up delivery and improve software quality.</div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('devops-details', this)">
+                    Read More
+                </button>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full ">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">UI/UX Design</h3>
+                <p class="text-gray-700">Build websites and web apps using technologies like HTML, CSS, JavaScript, and frameworks like React or Angular.</p>
+                <div class="hidden text-gray-700 mt-2" id="ui-ux-details">
+                    UI/UX designers ensure that digital products are user-friendly and visually appealing. UI (User Interface) design focuses on layout and aesthetics, while UX (User Experience) design ensures smooth and intuitive user interaction. Tools include Figma, Adobe XD, and usability testing techniques.</div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('ui-ux-details', this)">
+                    Read More
+                </button>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Cloud Computing</h3>
+                <p class="text-gray-700">Deliver computing services over the internet using platforms like AWS, Azure, and Google Cloud.</p>
+                <div class="hidden text-gray-700 mt-2" id="cloud-details">
+                    Cloud engineers work with services like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP) to deliver storage, computing power, and infrastructure over the internet. Roles include cloud architect, DevOps engineer, and cloud security specialist. Cloud computing enables companies to scale efficiently and cost-effectively.</div>
+                <button class="mt-4 text-blue-600 font-semibold hover:underline focus:outline-none" onclick="toggleDetails('cloud-details', this)">
+                    Read More
+                </button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
