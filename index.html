@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Careers Hub</title>
-    <style rel="stylesheet" src="style.css"></style>
+    <title>ITCareersMap</title>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" src="style.css"></link>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 pt-16">
     <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             <div class="text-blue-700 font-bold text-xl">
-                IT Careers Hub
+                ITCareersMap
             </div>
             <ul class="hidden md:flex space-x-8 text-gray-700 font-semibold">
                 <li><a href="#home" class="hover:text-blue-700 transition">Home</a></li>
                 <li><a href="#about-fields" class="hover:text-blue-700 transition">IT Fields</a></li>
                 
-                <li><a href="#career-advice" class="hover:text-blue-700 transition">Career Advice</a></li>
+                <li><a href="#roadmap" class="hover:text-blue-700 transition">Roadmap</a></li>
+                <li><a href="#learning-resources" class="hover:text-blue-700 transition">Learning Resources</a></li>
+                <li><a href="#quiz" class="hover:text-blue-700 transition">Quiz</a></li>
                 <li><a href="#about-me" class="hover:text-blue-700 transition">About Me</a></li>
-                <li><a href="#contact" class="hover:text-blue-700 transition">Contact</a></li>
+
             </ul>
             <div class="md:hidden">
                 <button id="menu-toggle" class="text-blue-700 focus:outline-none">
@@ -35,32 +41,41 @@
             <ul class="space-y-4 text-gray-700 font-semibold">
                 <li><a href="#home" class="block hover:text-blue-700 transition">Home</a></li>
                 <li><a href="#about-fields" class="block hover:text-blue-700 transition">IT Fields</a></li>
-                
-                <li><a href="#career-advice" class="block hover:text-blue-700 transition">Career Advice</a></li>
+                <li><a href="#roadmap" class="hover:text-blue-700 transition">Roadmap</a></li>
+                <li><a href="#learning-resources" class="block hover:text-blue-700 transition">Learning Resources</a></li>
+                <li><a href="#quiz" class="hover:text-blue-700 transition">Quiz</a></li>
                 <li><a href="#about-me" class="block hover:text-blue-700 transition">About Me</a></li>
-                <li><a href="#contact" class="block hover:text-blue-700 transition">Contact</a></li>
+                
             </ul>
 
         </div>
     </header>
     
     <section id="home" class="min-h-screen flex-items-center justify-center bg-gradient-to-r from-blue-50 to-white px-6">
-        <div class="max-w-4xl text-center mx-auto">
+        <div class="max-w-4xl text-center mx-auto" data-aos="fade-down">
             <h1 class="text-4xl md:text-6xl font-bold text-blue-800 mb-4">Explore Your Future in IT</h1>
             <p class="text-gray-700 text-lg md:text-xl mb-6">Learn about top IT fields, their real-world applications, and how you can start a successful career in tech.</p>
             <a href="#about-fields" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition">Discover IT Fields</a>
+            <img src="/assets/undraw_programming_65t2.svg" alt="IT Illustration" class="mx-auto w-72 mt-20 md:mt-12" />
+            <div class="mt-20">
+                <a href="#about-fields" class="text-blue-600 text-3xl animate-bounce block text-center mt-6">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+
+            </div>
         </div>
+        
     </section>
 
-    <section id="about-fields" class="py-16 bg-white px-6">
-        <div class="max-w-7xl mx-auto text-center mb-12">
+    <section id="about-fields" class="py-16 bg-gradient-to-r from-blue-50 to-white px-6">
+        <div class="max-w-7xl mx-auto text-center mb-12 " data-aos="fade-down">
             <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
                 IT Fields You Should Know
             </h2>
             <p class="text-gray-700 text-lg">Explore the most in-demand domains in Information Technology and how they impact the modern world.</p>
         </div>
-        <div class="max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto">
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full ">
+        <div class="max-w-7xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto items-start">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col  ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">Web Development</h3>
                 <p class="text-gray-700">Build websites and web apps using technologies like HTML, CSS, JavaScript, and frameworks like React or Angular.</p>
                 <div class="hidden text-gray-700 mt-2" id="web-dev-details">
@@ -70,7 +85,7 @@
                     Read More
                 </button>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">Mobile App Development</h3>
                 <p class="text-gray-700">Create apps for Android and iOS using Flutter, React Native, Kotlin, or Swift to reach mobile users.</p>
                 <div class="hidden text-gray-700 mt-2" id="mobile-app-details">
@@ -80,7 +95,7 @@
                     Read More
                 </button>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">Data Science</h3>
                 
                 <p class="text-gray-700">Analyze data to extract insights using Python, R, Machine Learning, and visualization tools like Tableau.</p>
@@ -92,7 +107,7 @@
                     Read More
                 </button>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full ">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col  ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">Artificial Intelligence</h3>
                 <p class="text-gray-700">Develop intelligent systems that can learn and make decisions using neural networks and deep learning.</p>
                 <div class="hidden text-gray-700 mt-2" id="artificial-intelligence-details">
@@ -102,7 +117,7 @@
                     Read More
                 </button>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">Cybersecurity</h3>
                 <p class="text-gray-700">Deliver computing services over the internet using platforms like AWS, Azure, and Google Cloud.</p>
                 <div class="hidden text-gray-700 mt-2" id="cybersecurity-details">
@@ -111,7 +126,7 @@
                     Read More
                 </button>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">DevOps</h3>
                 <p class="text-gray-700">Bridge development and operations to automate deployments and ensure fast delivery using CI/CD pipelines.</p>
                 <div class="hidden text-gray-700 mt-2" id="devops-details">
@@ -120,7 +135,7 @@
                     Read More
                 </button>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full ">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col  ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">UI/UX Design</h3>
                 <p class="text-gray-700">Build websites and web apps using technologies like HTML, CSS, JavaScript, and frameworks like React or Angular.</p>
                 <div class="hidden text-gray-700 mt-2" id="ui-ux-details">
@@ -129,7 +144,7 @@
                     Read More
                 </button>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col h-full">
+            <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col ">
                 <h3 class="text-xl font-semibold text-blue-700 mb-2">Cloud Computing</h3>
                 <p class="text-gray-700">Deliver computing services over the internet using platforms like AWS, Azure, and Google Cloud.</p>
                 <div class="hidden text-gray-700 mt-2" id="cloud-details">
@@ -140,6 +155,260 @@
             </div>
         </div>
     </section>
+
+    <section id="roadmap" class="py-16 bg-gradient-to-r from-blue-50 to-white px-6">
+        <div class="max-w-5xl mx-auto text-center mb-16" data-aos="fade-down">
+            <h2 class="text-4xl font-bold text-blue-800 mb-4">IT Career Roadmap</h2>
+            <p class="text-gray-700 text-lg">Follow these steps to become job-ready in the tech industry.</p>
+        </div>
+        <div class="relative max-w-3xl mx-auto">
+             <div class="absolute left-6 top-0 bottom-0 w-1 bg-blue-300 rounded">
+
+             </div>
+             <div class="flex items-start mb-12 relative">
+                <div class="absolute left-0">
+                    <div class="z-10 w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold shadow-md">
+                        1
+                    </div>
+                </div>
+                
+                <div class="ml-16">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">
+                        Learn The Basics
+                    </h3>
+                    <p class="text-gray-700">
+                        Understand core computer science concepts like data structures, operating systems, and networking. Begin with programming languages like C or Python.
+                    </p>
+                </div>
+             </div>
+
+             <div class="flex items-start mb-12 relative">
+                <div class="absolute left-0">
+                    <div class="z-10 w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold shadow-md">
+                        2
+                    </div>
+                </div>
+                
+                <div class="ml-16">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">
+                        Choose a Field
+                    </h3>
+                    <p class="text-gray-700">
+                        Pick your area of interest — Web Development, Data Science, Cloud, Cybersecurity, etc. Explore each field to see what suits you best.
+                    </p>
+                </div>
+             </div>
+
+             <div class="flex items-start mb-12 relative">
+                <div class="absolute left-0">
+                    <div class="z-10 w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold shadow-md">
+                        3
+                    </div>
+                </div>
+                
+                <div class="ml-16">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">
+                        Master Tools & Skills
+                    </h3>
+                    <p class="text-gray-700">
+                        Start building real projects using relevant tools, frameworks, and platforms like Git, GitHub, React, Node.js, or AWS.
+                    </p>
+                </div>
+             </div>
+
+             <div class="flex items-start mb-12 relative">
+                <div class="absolute left-0">
+                    <div class="z-10 w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold shadow-md">
+                        4
+                    </div>
+                </div>
+                
+                <div class="ml-16">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">
+                        Build Projects
+                    </h3>
+                    <p class="text-gray-700">
+                        Work on personal or open-source projects to gain hands-on experience. Create a portfolio showcasing your work.
+                    </p>
+                </div>
+             </div>
+
+             <div class="flex items-start mb-12 relative">
+                <div class="absolute left-0">
+                    <div class="z-10 w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold shadow-md">
+                        5
+                    </div>
+                </div>
+                
+                <div class="ml-16">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">
+                        Prepare for Jobs
+                    </h3>
+                    <p class="text-gray-700">
+                        Practice interviews, write a good resume, and apply for internships or entry-level jobs. Keep learning and stay updated.
+                    </p>
+                </div>
+             </div>
+        </div>
+    </section>
+    <section id="learning-resources" class="py-16 bg-gradient-to-r from-blue-50 to-white px-6">
+        <div class="max-w-5xl mx-auto text-center mb-16" data-aos="fade-down">
+            <h2 class="text-4xl font-bold text-blue-800 mb-4">Free Learning Resources</h2>
+            <p class="text-gray-700 text-lg">Explore curated resources to boost your skills in various tech fields.</p>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg-grid-cols-3 max-w-6xl mx-auto">
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">DSA (Data structures & Algorithms)</h3>
+                <p class="text-gray-700">Learm DSA through interactive tutorials and coding platforms</p>
+                <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Web Development</h3>
+                <p class="text-gray-700">Master HTML, CSS, JavaScript, and frameworks like React.</p>
+                <a href="https://www.freecodecamp.org/learn" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Cloud Computing</h3>
+                <p class="text-gray-700">Get started with AWS, Azure, and DevOps tools for cloud careers.</p>
+                <a href="https://www.aws.training/" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Cybersecurity</h3>
+                <p class="text-gray-700">Explore ethical hacking, network security, and malware analysis.</p>
+                <a href="https://www.cybrary.it/" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Python Programming</h3>
+                <p class="text-gray-700">Beginner to advanced Python courses with hands-on examples.</p>
+                <a href="https://www.learnpython.org/" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Mobile App Development</h3>
+                <p class="text-gray-700">Learn Android, iOS, and cross-platform frameworks like Flutter and React Native.</p>
+                <a href="https://developer.android.com/courses" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Artificial Intelligence</h3>
+                <p class="text-gray-700">Understand AI fundamentals, neural networks, and ML techniques.</p>
+                <a href="https://www.coursera.org/learn/machine-learning" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Data Science</h3>
+                <p class="text-gray-700">Explore Python for data analysis, visualization, and predictive modeling.</p>
+                <a href="https://www.coursera.org/specializations/data-science-python" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">DevOps</h3>
+                <p class="text-gray-700">Master CI/CD pipelines, Docker, Kubernetes, and automation tools.</p>
+                <a href="https://roadmap.sh/devops" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">UI/UX Design</h3>
+                <p class="text-gray-700">Learn user-centered design, prototyping, and design tools like Figma.</p>
+                <a href="https://www.interaction-design.org/courses" target="_blank" class="text-blue-600 font-medium hover:underline">Start Learning →</a>
+            </div>
+        </div>
+    </section>
+    <section id="quiz" class="py-16 bg-gradient-to-r from-blue-50 to-white px-6">
+        <div class="max-w-5xl mx-auto text-center mb-16" data-aos="fade-down">
+            <h2 class="text-4xl font-bold text-blue-800 mb-4">Quiz</h2>
+            <p class="text-gray-700 text-lg">Select a domain below to test your knowledge with interactive quizzes.</p>
+            <div class="flex flex-wrap justify-center gap-4 mb-10 mt-6">
+            
+            
+                <button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('dsa')">
+                    DSA
+                </button>
+                <button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('web')">
+                    Web Development
+                </button>
+                <button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('cloudcomputing')">
+                    Cloud Computing
+                </button>
+                <button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('cybersecurity')">
+                    Cybersecurity
+                </button>
+                <button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('mobile')">
+                    Mobile App Development
+                </button>
+                <button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('ai')">
+                    Artificial Intelligence
+                </button><button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('data')">
+                    Data Science
+                </button><button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('devops')">
+                    DevOps
+                </button>
+                <button class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700"
+                onclick="startQuiz('uiux')">
+                    UI/UX Design
+                </button>
+            
+            </div>
+            <div id="quizBox" class="text hidden">
+                <h3 class="text-2xl font-semibold mb-4"></h3>
+                <div id="question" class="text-xl font-semibold text-gray-800 mb-4"></div>
+                <div id="options" class="space-y-2 mb-6"></div>
+                <button id="nextBtn" onclick="nextQuestion()" class="px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Next</button>
+            </div>
+                <div id="result" class="mt-6 text-lg font-semibold text-green-600 hidden"></div>
+            
+        </div>
+        
+    </section>
+    <section id="about-me" class="py-16 bg-gradient-to-r from-blue-50 to-white px-6">
+        <div class="max-w-5xl mx-auto text-center mb-12" data-aos="fade-down">
+            <h2 class="text-4xl font-bold text-blue-800 mb-4">About Me</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">HI! I'm <strong>Suhani Mathur</strong>, a passionate tech enthusiast and aspiring software developer. I created this platform to simplify the journey into IT for students and beginners like myself.</p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-6">
+                While exploring a career in tech, I found most websites to be scattered, overloaded with ads, or lacking clear guidance. That's why I built this site - to offer a clean, structured, and beginner-friendly roadmap with free resources, step-by-step learning paths, and interactive quizzes tailored to popular IT fields like Web Development, DevOps, Cloud Computing, AI, Data Science, Mobile App Development, and UI/UX Design.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-6">
+                What makes this site different is its focus on <span class="font-semibold text-blue-700">clarity, simplicity, and engagement</span>. Along with curated resources, I’ve included interactive quizzes to help you test your knowledge, track your progress, and stay motivated as you learn.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-6"> 
+                I believe everyone deserves a fair start in tech, and this platform is my small effort to make that possible — especially for students from small towns or non-CS backgrounds. I hope it helps you. 
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-6"> 
+                Let's embark your tech journey together!!
+            </p>
+        </div>
+
+    </section>
+    <footer class="bg-gradient-to-r from-blue-800 to-blue-900 text-white py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+        <div class="text-center md:text-left">
+            <h4 class="text-xl font-semibold mb-2">Connect with Me</h4>
+            <p>Let's stay in touch! Follow me on social media:</p>
+        </div>
+        <div class="flex space-x-6">
+            <a href="https://github.com/mathursuhani" target="_blank" class="hover:text-gray-300">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.8-1.5-3.8-1.5-.6-1.5-1.4-1.9-1.4-1.9-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.2 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4C17 5.4 18 5.7 18 5.7c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z"/>
+                </svg>
+            </a>
+            <a href="http://www.linkedin.com/in/suhani-mathur-924417293" target="_blank" class="hover:text-gray-300">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M4.98 3.5C3.34 3.5 2 4.84 2 6.48c0 1.64 1.34 2.98 2.98 2.98s2.98-1.34 2.98-2.98C7.96 4.84 6.62 3.5 4.98 3.5zM2.4 8.9H7.5V21H2.4V8.9zM9.1 8.9h4.8v1.7h.1c.7-1.3 2.3-2.2 3.9-2.2 4.2 0 5 2.8 5 6.3V21H18V15.1c0-1.4 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21H9.1V8.9z"/>
+                </svg>
+            </a>
+            <a href="mathur.suhani324@gmail.com" class="hover:text-gray-300">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13 20 6.01V6H4zm0 12h16V8.83l-8 6.67-8-6.67V18z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
